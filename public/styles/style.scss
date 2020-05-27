@@ -1,0 +1,130 @@
+@import "mixins";
+
+$displayNum: "1200px";
+
+html{
+    height:100vh;
+}
+
+body{
+    margin:0;
+    padding:0;
+    height:100%;
+    background-color: grey;
+    min-width: 400px;
+}
+
+h1{
+    width:90%;
+    padding:1em;
+    margin:1em auto;
+    text-align: center;
+    box-shadow: 5px 5px rgb(43, 42, 42);
+    background-color: rgba(73, 73, 73, 0.514);
+    @include display($displayNum){
+        grid-area: header;
+        }
+}
+
+ul,ol{
+    padding:0;
+    margin:0;
+    list-style: none;
+}
+
+main{
+    margin:1em auto;
+    width:90%;
+    height:80%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(min-content,650px)  min-content;
+
+    @include display($displayNum){
+        grid-template-areas:
+        "header ."
+        "lines formbox";
+
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+.lines-container{
+    
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: rgba(255, 0, 0, 0.452) 2px dotted;
+    display:flex;
+        & > *{
+        flex-grow: 1;
+        border-left: black solid 1px;
+
+        &:last-child{
+            border-right: black solid 1px;
+        }
+
+    }
+
+    @include display($displayNum){
+        grid-area: lines;
+        
+    }
+
+    h2{
+        text-align: center;
+    }
+    li{
+        
+        text-align: center;
+        padding:1em;
+        margin:.4em;
+        background-color: rgba(73, 73, 73, 0.514);
+        border-radius: 1em;
+    }
+    
+
+}
+
+.createChar{
+   
+    box-shadow: 5px 5px rgb(43, 42, 42);
+    background-color: rgba(73, 73, 73, 0.514);
+    padding:1em;
+    justify-content: center;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+
+    @include display($displayNum){
+        grid-area: formbox;
+        width: 80%;
+        margin-left: 3em;
+    }
+
+    .inputField{
+        width:100%;
+        margin:1em;
+        label{
+            display:block;
+            
+        }
+        input{
+            box-sizing: border-box;
+            width:100%;
+            padding:1em;
+        }
+
+    }
+
+    #submit{
+        margin:1em;
+        width: 30%;
+        padding:.3em;
+        
+    }
+
+}
+
+
+

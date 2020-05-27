@@ -1,0 +1,6 @@
+@mixin display($displaySize){
+    @media (min-width: #{$displaySize}){
+        @content;
+    }
+
+}

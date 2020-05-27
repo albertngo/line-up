@@ -1,1 +1,141 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+html {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: grey;
+  min-width: 400px;
+}
+
+h1 {
+  width: 90%;
+  padding: 1em;
+  margin: 1em auto;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px #2b2a2a;
+          box-shadow: 5px 5px #2b2a2a;
+  background-color: rgba(73, 73, 73, 0.514);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    grid-area: header;
+  }
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+main {
+  margin: 1em auto;
+  width: 90%;
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: minmax(min-content, 650px) min-content;
+      grid-template-rows: minmax(-webkit-min-content, 650px) -webkit-min-content;
+      grid-template-rows: minmax(min-content, 650px) min-content;
+}
+
+@media (min-width: 1200px) {
+  main {
+        grid-template-areas: "header ." "lines formbox";
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+  }
+}
+
+.lines-container {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: rgba(255, 0, 0, 0.452) 2px dotted;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.lines-container > * {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-left: black solid 1px;
+}
+
+.lines-container > *:last-child {
+  border-right: black solid 1px;
+}
+
+@media (min-width: 1200px) {
+  .lines-container {
+    grid-area: lines;
+  }
+}
+
+.lines-container h2 {
+  text-align: center;
+}
+
+.lines-container li {
+  text-align: center;
+  padding: 1em;
+  margin: .4em;
+  background-color: rgba(73, 73, 73, 0.514);
+  border-radius: 1em;
+}
+
+.createChar {
+  -webkit-box-shadow: 5px 5px #2b2a2a;
+          box-shadow: 5px 5px #2b2a2a;
+  background-color: rgba(73, 73, 73, 0.514);
+  padding: 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .createChar {
+    grid-area: formbox;
+    width: 80%;
+    margin-left: 3em;
+  }
+}
+
+.createChar .inputField {
+  width: 100%;
+  margin: 1em;
+}
+
+.createChar .inputField label {
+  display: block;
+}
+
+.createChar .inputField input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 1em;
+}
+
+.createChar #submit {
+  margin: 1em;
+  width: 30%;
+  padding: .3em;
+}
+/*# sourceMappingURL=style.css.map */
