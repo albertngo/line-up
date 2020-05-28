@@ -10,9 +10,7 @@
 
 </head>
 
-
 <body>
-
 
 <main>
 
@@ -21,26 +19,33 @@
 
     <ul class="line-one ">
         <h2>LINE 1</h2>
-        <!-- <img src="../images/register.jpg"> -->
-
+        <% for (i=0; i < lineObj[0].length;i++){ %>
+            <li><%= lineObj[0][i]%></li>
+        <%}%>
+        
     </ul>
 
     <ul class="line-two">
         <h2>LINE 2</h2>
-        <!-- <img src="../images/cashier.png"> -->
+        <% for (i=0; i < lineObj[1].length;i++){ %>
+            <li><%= lineObj[1][i]%></li>
+        <%}%>
       
     </ul>
 
     <ul class="line-three">
         <h2>LINE 3</h2>
-        <!-- <img src="../images/cashier.png"> -->
+        <% for (i=0; i < lineObj[2].length;i++){ %>
+            <li><%= lineObj[2][i]%></li>
+        <%}%>
      
     </ul>
 
     <ul class="line-four">
         <h2>LINE 4</h2>
-        <!-- <img src="../images/cashier.png"> -->
-        
+        <% for (i=0; i < lineObj[3].length;i++){ %>
+            <li><%= lineObj[3][i]%></li>
+        <%}%>
     </ul>
 
 </div>

@@ -20,17 +20,17 @@ function clean(node)
   }
 }
 
-//all data related code
+//MODEL=================================================================================================//
 let randomName = [ "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter"]
-let lineObj = {
+let lineObj = {  
 };
+let numLines = 4;
 
 for (let i = 1; i <= 15; i++){
     let index = Math.floor(Math.random() * randomName.length); //0->length-1
     let currentName = randomName[index];
 
     // select a line
-    let numLines = 4;
     let lineIndex = Math.floor(Math.random() * numLines); //0->3     
 
     // place into obj
@@ -39,4 +39,17 @@ for (let i = 1; i <= 15; i++){
     } else lineObj[lineIndex].push(currentName);
     
 }
-module.exports = {lineObj}
+console.log(lineObj);
+
+let keys = Object.keys(lineObj)
+
+//remove from list
+setInterval(() => {
+  let lineIndex = Math.floor(Math.random() * numLines); //0->3
+  lineObj[lineIndex].shift();   
+
+}, 5000);
+
+
+
+module.exports = {lineObj, keys}
