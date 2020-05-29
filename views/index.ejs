@@ -19,6 +19,7 @@
 
     <ul class="line-one ">
         <h2>LINE 1</h2>
+        <h3>(Max 5 Items)</h2>
         <% for (i=0; i < lineObj[0].length;i++){ %>
             <li><%= lineObj[0][i]%></li>
         <%}%>
@@ -27,6 +28,7 @@
 
     <ul class="line-two">
         <h2>LINE 2</h2>
+        <h3>(Max 10 Items)</h2>
         <% for (i=0; i < lineObj[1].length;i++){ %>
             <li><%= lineObj[1][i]%></li>
         <%}%>
@@ -35,6 +37,7 @@
 
     <ul class="line-three">
         <h2>LINE 3</h2>
+        <h3>(Open)</h2>
         <% for (i=0; i < lineObj[2].length;i++){ %>
             <li><%= lineObj[2][i]%></li>
         <%}%>
@@ -43,6 +46,7 @@
 
     <ul class="line-four">
         <h2>LINE 4</h2>
+        <h3>(Open)</h2>
         <% for (i=0; i < lineObj[3].length;i++){ %>
             <li><%= lineObj[3][i]%></li>
         <%}%>
@@ -60,7 +64,7 @@
     </div>
 
     <div class="inputField">
-        <label for="require">Number of Items:</label>
+        <label for="items">Number of Items:</label>
         <input type="text" name="items" id="items">
     </div>
 

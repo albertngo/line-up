@@ -70,9 +70,18 @@ main{
         grid-area: lines;
         
     }
-
+    
     h2{
         text-align: center;
+        
+        
+    }
+    h3{
+        margin:1em auto;
+        width:90%;
+        text-align: center;
+        padding-bottom:1em;
+        border-bottom: double 1px black;
     }
     li{
         
